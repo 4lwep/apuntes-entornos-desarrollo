@@ -33,3 +33,36 @@ Además de esos comentarios simples, javadoc nos proporciona una serie de etique
 - @return: Añade el tipo de retorno de un método
 - @throws: Añade la cabecera Throws a la documentación con la excepción que puede ser lanzada por un método
 - @version: Añade la cabecera con versión de una clase
+
+## EJEMPLO
+Así se ve la página principal del javadoc de un proyecto
+
+![](assets/javadoc.png)
+
+Un ejemplo concreto de una interfaz es el siguiente:
+
+```java
+package pra1_bvII_Grupo4;
+
+/**
+ *
+ * @author Alex
+ */
+/**
+ * Interfaz para vehículos con motor.
+ */
+public interface Motorizado {
+    /**
+     * Calcula las revoluciones del motor.
+     * @param velocidadCorte Velocidad de corte del motor en m/min.
+     * @param diametro Diámetro en metros.
+     * @return Revoluciones por minuto del motor.
+     */
+    default double calcularRevoluciones(int velocidadCorte, double diametro) {
+        return (1000 * velocidadCorte) / (Math.PI * diametro);
+    }
+}
+```
+Este código genera el siguiente javadoc
+
+![](assets/javadoc_interfaz.png)
