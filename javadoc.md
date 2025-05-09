@@ -24,3 +24,12 @@ public class Operaciones{
 
 ...
 ```
+## ETIQUETAS
+Además de esos comentarios simples, javadoc nos proporciona una serie de etiquetas que podemos usar para diferentes cosas. Estas son algunas de ellas:
+
+- @author: Indica el autor o autores de un proyecto
+- @deprecated: Añade un comentario de que este API no debería volver a usarse
+- @param: Añade un parámetro y su descripción 
+- @return: Añade el tipo de retorno de un método
+- @throws: Añade la cabecera Throws a la documentación con la excepción que puede ser lanzada por un método
+- @version: Añade la cabecera con versión de una clase
