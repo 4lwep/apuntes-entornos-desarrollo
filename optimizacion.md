@@ -13,7 +13,7 @@ La Hendiondez o code smell es indica que el código tiene un problema profundo. 
 
 ## Análisis de código
 
-El análisis de código sirve para ver el funcionamiento del código fuente
+El análisis de código consiste en analizar el código en una aplicación en busca de posibles mejoras
 
 ### 1. Análisis estático
 
@@ -28,16 +28,30 @@ Los linters son programas que ofrecen la posibilidad de analizar de forma estát
 
 ### 2. Análisis dinámico
 
-El análisis dínamico sirve para analizar el funcionamiento del programa durante la ejecución
+El análisis dínamico sirve para analizar el funcionamiento del programa durante la ejecución, se puede realizar con tests donde se indica cual es el valor esperado de una función y el test nos hace saber si el valor es correcto o no
+
+Un test en java se vería de esta forma:
+```java
+@Test
+public void comprobarSuma() {
+
+	int resultado = sumar(2, 2);
+	int valorEsperado = 4;
+
+	assertEquals(valueExpected, result);
+}
+```
 
 ## Continuous Inspection o Continuous Analysis
 
-Esto es la inspección de código y consiste en inspeccionar el código.
+Continuos inspection consiste en analizar un código en busca de bugs para resolver
 
 Algunos sitios web que ofrecen este servicio son: 
 
-- Scrutinizer
-- SonarQube
+- #### Scrutinizer
+    Da soporte para PHP, Python y Ruby y tiene varios planes: el básico a 49€ al mes, profesional a 99€ al mes y el unlimited a 199€ al mes
+- #### SonarQube
+    Da soporte a multitud de lenguajes y tiene un periodo de 14 días de prueba gratuita, tras la prueba, tiene varios planes al igual que el anterior: plan developer por 160€ al año, plan enterprise por 21000€ al año y plan data center por 136000€ al año
 
 ## Refactorización
 
