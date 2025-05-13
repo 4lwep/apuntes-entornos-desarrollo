@@ -37,7 +37,7 @@ Además de esos comentarios simples, javadoc nos proporciona una serie de etique
 ## EJEMPLO
 Así se ve la página principal del javadoc de un proyecto
 
-![](assets/javadoc.png)
+![](assets/javadoc_proyecto.png)
 
 Un ejemplo concreto de una interfaz es el siguiente:
 
