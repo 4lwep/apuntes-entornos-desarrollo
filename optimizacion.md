@@ -50,8 +50,11 @@ Algunos sitios web que ofrecen este servicio son:
 
 - #### Scrutinizer
     Da soporte para PHP, Python y Ruby y tiene varios planes: el básico a 49€ al mes, profesional a 99€ al mes y el unlimited a 199€ al mes
+
+    ![](assets/scrutinizer_main.png)
 - #### SonarQube
     Da soporte a multitud de lenguajes y tiene un periodo de 14 días de prueba gratuita, tras la prueba, tiene varios planes al igual que el anterior: plan developer por 160€ al año, plan enterprise por 21000€ al año y plan data center por 136000€ al año
+    ![](assets/sonarqube_main.png)
 
 ## Refactorización
 
