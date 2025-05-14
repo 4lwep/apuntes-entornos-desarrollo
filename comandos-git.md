@@ -40,7 +40,8 @@ repositorio.
 Ahora explicaré la manera de crear un repositorio local en git una vez esté instalado:
 - Primero de todo hay que inicializar el repositorio escribiendo el comando `git init` dentro del directorio elegido y dentro se creará una carpeta .git que contiene información del repositorio y por lo tanto, indica que ha sido creado.
 
-![alt text](assets/init.png)
+![](assets/init.png)
+
 - Después hay que iniciar el proyecto que vayamos a hacer creando por ejemplo algún archivo como un readme para tener algo de contenido para una primera versión.
 - Para registrar esos cambios y empezar con el repositorio, hay que escribir los comandos `git add .` (para añadirlos al stagging area) donde el punto indica todos los archivos del directorio y `git commit -m "mensaje descriptivo de los cambios"` (para confirmar los cambios).
 
@@ -68,8 +69,6 @@ Ahora hablaré de como ver las diferencias entre commits. Se puede hacer con dos
 ## ☁️ Crear un repositorio remoto en GitHub y subir nuestro repositorio local
 Ahora vamos a subir un repositorio que tengamos en nuestro equipo local a GitHub.
 Para esto primero hay que crear una cuenta en GitHub, después, en la página de nuestro perfil, darle al signo + y en *New repository*, colocamos el nombre de repositorio y el resto de cosas se dejan por defecto. 
-
-![](assets/repo.png)
 
 Después GitHub nos dará los enlaces para acceder a nuestro repositorio remoto. Elegiremos el enlace de HTTPS.
 
