@@ -1,4 +1,4 @@
-# Comandos git
+# 🧑🏼‍💻 Comandos git
 
 GIT es un sistema de control de versiones ampliamente utilizado, creado en 2005 por Linus Torvalds que también es conocido por ser el creador del kernel de Linux.
 
@@ -17,7 +17,7 @@ Un sistema de control de versiones permite gestionar y rasterar el estado de un 
 - [Creación de ramas](#creación-de-ramas)
 - [Fusión y eliminación de ramas](#fusión-y-eliminación-de-ramas)
 
-## Secciones de un proyecto de git
+## 🏘️ Secciones de un proyecto de git
 Un proyecto de git contiene varias secciones:
 
 - Directorio de trabajo: el directorio de trabajo en git es una carpeta donde se
@@ -36,7 +36,7 @@ repositorio.
 
 ![](assets/secciones.png)
 
-## Inicializar y guardar cambios en un repositorio local
+## 🚩 Inicializar y guardar cambios en un repositorio local
 Ahora explicaré la manera de crear un repositorio local en git una vez esté instalado:
 - Primero de todo hay que inicializar el repositorio escribiendo el comando `git init` dentro del directorio elegido y dentro se creará una carpeta .git que contiene información del repositorio y por lo tanto, indica que ha sido creado.
 
@@ -46,12 +46,12 @@ Ahora explicaré la manera de crear un repositorio local en git una vez esté in
 
 ![](assets/commit.png)
 
-## Revisar commits realizados
+## 👀 Revisar commits realizados
 Para revisar los commits realizados en un repositorio se usa el comando `git log --oneline --all` esas son unas de las muchas opciones que tiene el comando `git log` y para ir a un commit concreto se puede usar el comando `git checkout id_commit`.
 
 ![](assets/log.png)
 
-## Etiquetar commits y ver diferencias
+## 🏷️ Etiquetar commits y ver diferencias
 Etiquetar un commit consiste en ponerle un *nombre* para identificarlo, esto se hace para hacer una *release* y no se debe hacer en todos los commits. Esto se logra con el comando `git tag -a "nombre version" -m "mensaje para la versión" id_commit`.
 
 ![](assets/etiquetas.png)
@@ -65,7 +65,7 @@ Ahora hablaré de como ver las diferencias entre commits. Se puede hacer con dos
 
 ![](assets/diff.png)
 
-## Crear un repositorio remoto en GitHub y subir nuestro repositorio local
+## ☁️ Crear un repositorio remoto en GitHub y subir nuestro repositorio local
 Ahora vamos a subir un repositorio que tengamos en nuestro equipo local a GitHub.
 Para esto primero hay que crear una cuenta en GitHub, después, en la página de nuestro perfil, darle al signo + y en *New repository*, colocamos el nombre de repositorio y el resto de cosas se dejan por defecto. 
 
@@ -103,7 +103,7 @@ Después, hay que ir a la configuración de tu perfil en GitHub y en el apartado
 
 ![](assets/ssh.png)
 
-## Resolución de conflictos
+## ✔️ Resolución de conflictos
 Un conflicto se produce cuando en un mismo commit uno o varios archivos son diferentes en el repositorio local y en el remoto, si intentamos subir los cambios del repositorio local al remoto nos dará error y nos pedirá que actualicemos el repositorio local con el comadno `git pull` y al hacer esto es que nos avisará que hay conflictos ya que archivos que deberían ser iguales no lo son, por lo tanto, al intentar modificar esos archivos, se pedirá al usuario que elija alguna de las dos versiones del archivo. Apareceran las siguientes marcas:
 - `<<<<<<<`: indica las líneas en el commit local
 - `=======`: indica las líneas sin conflictos
@@ -112,7 +112,7 @@ Una vez elijamos la versión que queremos hacemos commit y ya se podrá subir al
 
 ![](assets/conflicto.png)
 
-## Creación de ramas
+## 🪾 Creación de ramas
 Una rama sirve para desarrollar distintas partes de un proyecto o para crear distintas versiones de este y desarrollar estar versiones todo en paralelo.
 
 Una rama se puede crear a partir de cualquier commit con el comando `git checkout -b nombre-rama commit-de-partida` de esta forma crearemos la rama y cambiaremos a ella, esta rama se habrá creado con los contenidos del commit en el que estuvieramos o del commit indicado si hay y a partir de ahí puede seguir su propio camino en el desarrollo sin afectar a la rama principal. Para cambiar entre ramas se usa en comando `git checkout nombre-de-la-rama` para ver las ramas existentes y en cuál estamos, `git branch` y para ver los commits de un repositorio incluyendo las distintas ramas y de manera gráfica usamos `git log --oneline --all --graph`. 
@@ -122,7 +122,7 @@ Una rama se puede crear a partir de cualquier commit con el comando `git checkou
 Además, las ramas se pueden crear sin cambiar a ellas automáticamente con el comando `git branch nueva-rama` o `git branch nueva-rama commit-de-partida` si queremos crear la rama a partir de otro commit que no sea el actual.
 Para subir información a un repositorio remoto hemos visto que se usa el comando `git push origin master` donde master es el nombre de la rama principal, sin embargo, ahora que tenemos más ramas, se puede usar `git push origin --all` para subir todas las ramas o cambiar master por el nombre de las ramas concretas que queramos subir.
 
-## Fusión y eliminación de ramas
+## 🫂 Fusión y eliminación de ramas
 Para eliminar una rama se puede usar el comando `git branch -d  nombre-rama` si la rama no se ha añadido a la rama master, dara un error y habrá que poner el comando `git branch -D nombre-rama` para forzar la eliminación. Para fusionar una rama con otra habrá que usar el comando `git merge nombre-rama` y los cambios dentro de la rama indicada se añadirán a la rama en la que estamos actualmente
 
 ![](assets/marge.png)
