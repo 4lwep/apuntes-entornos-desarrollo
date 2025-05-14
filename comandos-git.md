@@ -76,7 +76,7 @@ Después GitHub nos dará los enlaces para acceder a nuestro repositorio remoto.
 
 Ahora en el repositorio local escribimos el comando `git add origin https://github.com/usuario/repositorio.git` para asignar el repositorio local al remoto que acabamos de crear. Por último, con el comando `git push -u origin master` subimos los archivos del repositorio local al remoto, además, con el comando `git push --tags` se pueden subir las etiquetas que hayamos creado.
 
-## Deshaciendo commits
+## 🔄 Deshaciendo commits
 Se pueden desahacer los cambios de un repositorio antes de hacer un commit escribiendo el comando `git reset --hard`.
 
 ![](assets/reset-no-commit.png)
@@ -86,14 +86,14 @@ comando añadiendo `git reset --hard HEAD~1` donde el 1 de *HEAD~1* es la cantid
 
 ![](assets/reset-commit.png)
 
-## Archivo .gitignore
+## 🚫 Archivo .gitignore
 El archivo .gitignore es un archivo oculto dentro de nuestro repositorio que nos permite excluir los archivos que le indiquemos del repositorio, es decir, git no trabajará con ellos y no se subirán al repositorio remoto cuando hagamos push
 
 ![](assets/gitignore.png)
 
 ![](assets/repo-ignore.png)
 
-## Usar git y GitHub con un par de claves SSH
+## 🤝🏼 Usar git y GitHub con un par de claves SSH
 Hemos visto que se puede usar GitHub en colaboración con GIT gracias a un enlace https, sin embargo, también podemos conectar nuestro repositorio local con el de GIT usando un par de claves SSH. para esto tenemos que generar esas claves con el comando `ssh-keygen` y generará dos archivos en un repositorio .ssh. 
 
 ![](assets/claves.png)
