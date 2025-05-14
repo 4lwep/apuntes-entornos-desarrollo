@@ -1,4 +1,4 @@
-# Documentación en javadoc
+# 📚 Documentación en javadoc
 La documentación con javadoc sirve para explicar el funcionamiento de una programa en java 
 
 ```java
@@ -24,7 +24,7 @@ public class Operaciones{
 
 ...
 ```
-## ETIQUETAS
+## 🏷️ ETIQUETAS
 Además de esos comentarios simples, javadoc nos proporciona una serie de etiquetas que podemos usar para diferentes cosas. Estas son algunas de ellas:
 
 - @author: Indica el autor o autores de un proyecto
