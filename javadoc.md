@@ -2,7 +2,7 @@
 La documentación con javadoc sirve para explicar el funcionamiento de una programa en java 
 
 ```java
-/***
+/**
  * Esto es un comentario javadoc
  * /
 ```
