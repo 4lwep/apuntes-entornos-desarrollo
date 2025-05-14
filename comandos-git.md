@@ -34,9 +34,7 @@ algunos archivos para que git no pueda hacer nada con ellos, es decir, los ignor
 con el archivo .gitignore; de esta forma, esos archivos ya no formarían parte del
 repositorio.
 
-<div style="text-align: center;">
-    <img src="assets/secciones.png" alt="Descripción de la imagen" />
-</div>
+![](assets/secciones.png)
 
 ## Inicializar y guardar cambios en un repositorio local
 Ahora explicaré la manera de crear un repositorio local en git una vez esté instalado:
