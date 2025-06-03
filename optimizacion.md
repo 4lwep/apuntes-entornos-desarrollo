@@ -61,7 +61,120 @@ Algunos sitios web que ofrecen este servicio son:
 La refactorización consiste en inspeccionar el código fuente buscando reestructurarlo de la manera más optimizada posible. Existen diferentes prácticas que se llevan a cabo: 
 
 - Renombrado de variables 
+```java
+//Antes
+int a = 10;
+int b = 20;
+int c = a + b;
+System.out.println(c);
+// a, b y c no tienen ningún significado
+```
+
+```java
+//Después
+int manzanas = 10;
+int peras = 20;
+int fruta = manzanas + peras;
+System.out.println(fruta);
+```
 - Pasar código duplicacado a funciones 
-- Eliminación de código inalcanzable 
-- Eliminación de código redundante 
+```java
+//Antes
+public static void main(String args[]){
+    int[] numeros = {9, 5, 1, 6, 8, 1};
+
+    int mayor = 0;
+    for (int numrero : numeros){ //Bucle para buscar el mayor entero en el array
+        if (numero > mayor){
+            mayor = numero;
+        }
+    }
+
+    int[] numeros2 = {7, 2, 4, 9, 3, 5};
+
+    mayor = 0;
+    for (int numrero : numeros){ //Bucle para buscar el mayor entero en el array otra vez
+        if (numero > mayor){
+            mayor = numero;
+        }
+    }
+}
+```
+
+```java
+//Después
+public static void main(String args[]){
+    int[] numeros = {9, 5, 1, 6, 8, 1};
+    encontrarNumeroMayor(numeros);
+    int[] numeros2 = {7, 2, 4, 9, 3, 5};
+    encontrarNumeroMayor(numeros2);
+}
+
+public static void encontrarNumeroMayor(int[] lista){
+    int mayor = 0;
+    for (int numero : lista){
+        if (numero > mayor){
+            mayor = numero;
+        }
+    }
+    return mayor;
+}
+```
+- Eliminación de código inalcanzable
+```java
+//Antes
+public static void encontrarNumeroMayor(int[] lista){
+    int mayor = 0;
+    for (int numero : lista){
+        if (numero > mayor){
+            mayor = numero;
+        }
+    }
+    return mayor;
+
+    mayor - 1; // Esta línea nunca se ejecutará ya que la función devuelve un valor antes
+}
+```
+
+```java
+//Después
+public static void encontrarNumeroMayor(int[] lista){
+    int mayor = 0;
+    for (int numero : lista){
+        if (numero > mayor){
+            mayor = numero;
+        }
+    }
+    return mayor;
+}
+```
+- Eliminación de código redundante
+```java
+//Antes
+int a = 10;
+int b = 20;
+int c = b * 1 // b * 1 es lo mismo que b por lo que eso es innecesario
+return a + c;
+```
+
+```java
+//Después
+int a = 10;
+int b = 20;
+return a + b;
+```
 - Eliminación de código muerto
+```java
+//Antes
+int a = 10;
+int b = 20;
+int c = 40; // El valor de c nunca es usado para nada
+return d = a + b;
+```
+
+```java
+//Después
+int a = 10;
+int b = 20;
+return d = a + b;
+```
